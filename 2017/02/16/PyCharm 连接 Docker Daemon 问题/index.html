@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/16/PyCharm 连接 Docker Daemon 问题/index.html">
 <meta property="og:site_name" content="veryflying">
 <meta property="og:description" content="在 Pycharm 连接 Docker Daemon 时遇到连接错误，使用unix:///var/tmp/docker.sock 并没用，找了很久才发现 PyCharm 貌似不支持该方法，只有用socat，使用socat TCP-LISTEN:2375,reuseaddr,fork UNIX-CONNECT:/var/run/docker.sock &amp;amp;，然后可以通过远程访问2375端口来访">
-<meta property="og:updated_time" content="2017-02-16T13:05:08.000Z">
+<meta property="og:updated_time" content="2017-02-16T13:07:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyCharm 连接 Docker Daemon 问题">
 <meta name="twitter:description" content="在 Pycharm 连接 Docker Daemon 时遇到连接错误，使用unix:///var/tmp/docker.sock 并没用，找了很久才发现 PyCharm 貌似不支持该方法，只有用socat，使用socat TCP-LISTEN:2375,reuseaddr,fork UNIX-CONNECT:/var/run/docker.sock &amp;amp;，然后可以通过远程访问2375端口来访">
@@ -337,6 +337,7 @@
 
       
         <p>在 <code>Pycharm</code> 连接 <code>Docker Daemon</code> 时遇到连接错误，使用<code>unix:///var/tmp/docker.sock</code> 并没用，找了很久才发现 <code>PyCharm</code> 貌似不支持该方法，只有用<code>socat</code>，使用<code>socat TCP-LISTEN:2375,reuseaddr,fork UNIX-CONNECT:/var/run/docker.sock &amp;</code>，然后可以通过远程访问<code>2375</code>端口来访问<code>Docker Daemon</code> ，在 <code>PyCharm</code> 设置中填入 <code>tcp://localhost:2375</code> 即可访问 <code>Docker Daemon</code>。</p>
+<p>参考：<code>[https://youtrack.jetbrains.com/oauth?state=%2Fissue%2FIDEA-153973]</code>h</p>
 
       
     </div>
